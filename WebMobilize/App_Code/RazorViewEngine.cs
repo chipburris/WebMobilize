@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 
-namespace WebMobilize.App_Code
+namespace WebMobilize
 {
     internal class WMRazorViewEngine : RazorViewEngine
     {

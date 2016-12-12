@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web;
 
-namespace WebMobilize.App_Code
+namespace WebMobilize
 {
     public static class Detect
     {
@@ -55,8 +55,7 @@ namespace WebMobilize.App_Code
 
             String UserAgent = HttpContext.Current.Request.UserAgent;
 
-            if (UserAgent.IndexOf(ipad, StringComparison.OrdinalIgnoreCase) >= 0 ||
-                UserAgent.IndexOf(tablet, StringComparison.OrdinalIgnoreCase) >= 0 || // catches some of the tablets out there
+            if (UserAgent.IndexOf(ipad, StringComparison.OrdinalIgnoreCase) >= 0 ||  UserAgent.IndexOf(tablet, StringComparison.OrdinalIgnoreCase) >= 0 || // catches some of the tablets out there
 
                 // So the usual rule is that android tablets user agent strings
                 // should not have the word mobile in them but will have android.

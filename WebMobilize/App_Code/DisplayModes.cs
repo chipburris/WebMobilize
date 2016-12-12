@@ -1,6 +1,6 @@
 ﻿using System.Web.WebPages;
 
-namespace WebMobilize.App_Code
+namespace WebMobilize
 {
     internal static class DisplayModes
     {
