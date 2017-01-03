@@ -108,7 +108,7 @@
     <Content Include="App_Code\DisplayModes.cs" />
     <Content Include="App_Code\RazorViewEngine.cs" />
     <Content Include="App_Code\Manager.cs" />
-    <Content Include="App_Code\WebRormViewEngine.cs" />
+    <Compile Include="App_Code\WebformViewEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
