@@ -13,6 +13,9 @@ namespace WebMobilize
         private const string STR_ViewsActionViewsWebForm = "~/Views/{1}/{0}/{0}.aspx";
         private const string STR_ViewsActionViewsWebFormPartial = "~/Views/{1}/{0}/{0}.ascx";
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="mWebformViewEngine"/> class.
+        /// </summary>
         public mWebformViewEngine()
         {
           
