@@ -11,7 +11,7 @@ namespace WebMobilize
     {
         public static void Initialize(bool DebugMode = false)
         {
-            DisplayModes.RegisterDisplayModes();
+            DisplayModeRegistration.RegisterDisplayModes();
 
             ViewEngines.Engines.Clear();
             ViewEngines.Engines.Add(new WMRazorViewEngine());

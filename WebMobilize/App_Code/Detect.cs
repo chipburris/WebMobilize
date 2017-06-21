@@ -7,18 +7,7 @@ namespace WebMobilize
     {
         #region Device Constants
 
-        private const string ipod = "ipod";
-        private const string ipad = "ipad";
-        private const string iphone = "iphone";
-        private const string android = "android";
-        private const string mobile = "mobile";
-        private const string tablet = "tablet";
-        private const string winphone = "windows phone os";
-        private const string iemobile = "iemobile";
-        private const string webkit = "webkit";
-        private const string chrome = "chrome";
-        private const string ie = "ie";
-        private const string HTML5 = "HTML5";
+      
 
         #endregion Device Constants
 
@@ -33,7 +22,7 @@ namespace WebMobilize
         public static bool isMobile()
         {
             string UserAgent = HttpContext.Current.Request.UserAgent.ToLower();
-            string[] TestedAttributes = { mobile, ipad, iphone, ipod, android, winphone };
+            string[] TestedAttributes = { DeviceConstants.Android, DeviceConstants.mobile, DeviceConstants.iPad, DeviceConstants.iPhone , DeviceConstants.WindowsPhone };
 
             foreach (string attribute in TestedAttributes)
             {
@@ -44,7 +33,7 @@ namespace WebMobilize
         }
 
         /// <summary>
-        /// Is the browsing device a Mobile device
+        /// Is the browsing device a Tablet
         /// </summary>
         /// <returns></returns>
         ///
@@ -55,15 +44,15 @@ namespace WebMobilize
 
             String UserAgent = HttpContext.Current.Request.UserAgent;
 
-            if (UserAgent.IndexOf(ipad, StringComparison.OrdinalIgnoreCase) >= 0 ||  UserAgent.IndexOf(tablet, StringComparison.OrdinalIgnoreCase) >= 0 || // catches some of the tablets out there
+            if (UserAgent.IndexOf(DeviceConstants.iPad, StringComparison.OrdinalIgnoreCase) >= 0 || UserAgent.IndexOf(DeviceConstants.Tablet, StringComparison.OrdinalIgnoreCase) >= 0 || // catches some of the tablets out there
 
                 // So the usual rule is that android tablets user agent strings
                 // should not have the word mobile in them but will have android.
                 // Not all OEMs follow this rule unfortunately. So we are checking to see
                 // if Android is there but mobile is not.
 
-                (UserAgent.IndexOf(android, StringComparison.OrdinalIgnoreCase) >= 0 &&
-                UserAgent.IndexOf(mobile, StringComparison.OrdinalIgnoreCase) <= 0))
+                (UserAgent.IndexOf(DeviceConstants.Android, StringComparison.OrdinalIgnoreCase) >= 0 &&
+                UserAgent.IndexOf(DeviceConstants.mobile , StringComparison.OrdinalIgnoreCase) <= 0))
 
             { return true; }
             else { return false; }
@@ -78,15 +67,12 @@ namespace WebMobilize
         {
             String UserAgent = HttpContext.Current.Request.UserAgent;
 
-            if (UserAgent.IndexOf(ipod, StringComparison.OrdinalIgnoreCase) >= 0 ||
-                UserAgent.IndexOf(iphone, StringComparison.OrdinalIgnoreCase) >= 0 ||
-                (UserAgent.IndexOf(mobile, StringComparison.OrdinalIgnoreCase) >= 0 &&
-                UserAgent.IndexOf(ipad, StringComparison.OrdinalIgnoreCase) <= 0) ||
-                UserAgent.IndexOf(iemobile, StringComparison.OrdinalIgnoreCase) >= 0
-                )
+            if (UserAgent.IndexOf(DeviceConstants.iPhone, StringComparison.OrdinalIgnoreCase) >= 0) return true;
+            if (UserAgent.IndexOf(DeviceConstants.mobile, StringComparison.OrdinalIgnoreCase) >= 0 &&  UserAgent.IndexOf(DeviceConstants.iPad, StringComparison.OrdinalIgnoreCase) <= 0) return true;
 
-            { return true; }
-            else { return false; }
+            
+           
+            return false; 
         }
 
         /// <summary>
@@ -100,10 +86,7 @@ namespace WebMobilize
         {
             String UserAgent = HttpContext.Current.Request.UserAgent;
 
-            if (UserAgent.IndexOf(iphone, StringComparison.OrdinalIgnoreCase) >= 0 ||
-                UserAgent.IndexOf(iphone, StringComparison.OrdinalIgnoreCase) >= 0)
-
-            { return true; }
+            if (UserAgent.IndexOf(DeviceConstants.iPhone, StringComparison.OrdinalIgnoreCase) >= 0)    return true; 
             else { return false; }
         }
 
@@ -111,7 +94,7 @@ namespace WebMobilize
         {
             String UserAgent = HttpContext.Current.Request.UserAgent;
 
-            if (UserAgent.IndexOf(ipad, StringComparison.OrdinalIgnoreCase) >= 0)
+            if (UserAgent.IndexOf(DeviceConstants.iPad, StringComparison.OrdinalIgnoreCase) >= 0)
             { return true; }
             else { return false; }
         }
@@ -123,7 +106,7 @@ namespace WebMobilize
         public static bool isIOS()
         {
             string UserAgent = HttpContext.Current.Request.UserAgent.ToLower();
-            string[] TestedAttributes = { ipad, iphone, ipod };
+            string[] TestedAttributes = { DeviceConstants.iPad, DeviceConstants.iPhone };
 
             foreach (string attribute in TestedAttributes)
             {
@@ -137,7 +120,7 @@ namespace WebMobilize
         {
             String UserAgent = HttpContext.Current.Request.UserAgent;
 
-            if (UserAgent.IndexOf(android, StringComparison.OrdinalIgnoreCase) >= 0)
+            if (UserAgent.IndexOf(DeviceConstants.Android, StringComparison.OrdinalIgnoreCase) >= 0)
             { return true; }
             else { return false; }
         }
@@ -146,30 +129,18 @@ namespace WebMobilize
         {
             String UserAgent = HttpContext.Current.Request.UserAgent;
 
-            if (UserAgent.IndexOf(webkit, StringComparison.OrdinalIgnoreCase) >= 0)
+            if (UserAgent.IndexOf(DeviceConstants.WebKit, StringComparison.OrdinalIgnoreCase) >= 0)
             { return true; }
             else { return false; }
         }
 
-        public static bool isMetro()
-        {
-            String UserAgent = HttpContext.Current.Request.UserAgent.ToLower();
-
-            string[] TestedAttributes = { iemobile, winphone };
-
-            foreach (string attribute in TestedAttributes)
-            {
-                if (UserAgent.Contains(attribute.ToLower())) { return true; }
-            }
-
-            return false;
-        }
+       
 
         public static bool isChrome()
         {
             String UserAgent = HttpContext.Current.Request.UserAgent;
 
-            if (UserAgent.IndexOf(chrome, StringComparison.OrdinalIgnoreCase) >= 0)
+            if (UserAgent.IndexOf(DeviceConstants.Chrome, StringComparison.OrdinalIgnoreCase) >= 0)
             { return true; }
             else { return false; }
         }
