@@ -3,12 +3,12 @@ using System.Web.Mvc;
 
 namespace WebMobilize
 {
-    internal class WMRazorViewEngine : RazorViewEngine
+    internal class WM_RazorViewEngine : RazorViewEngine
     {
         const string STR_ViewsActionViewscshtml = "~/Views/{1}/{0}/{0}.cshtml";
         const string STR_ViewsActionViewsSharedcshtml = "~/Views/{1}/Shared/{0}.cshtml";
 
-        public WMRazorViewEngine()
+        public WM_RazorViewEngine()
         {
             base.ViewLocationFormats = base.ViewLocationFormats.Concat
             (new[] { STR_ViewsActionViewscshtml, STR_ViewsActionViewsSharedcshtml, }).ToArray();

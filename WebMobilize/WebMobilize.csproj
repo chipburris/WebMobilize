@@ -106,10 +106,10 @@
   <ItemGroup>
     <Content Include="App_Code\Detect.cs" />
     <Content Include="App_Code\DisplayModeRegistration.cs" />
-    <Content Include="App_Code\RazorViewEngine.cs" />
+    <Content Include="App_Code\WM_RazorViewEngine.cs" />
     <Content Include="App_Code\Manager.cs" />
     <Content Include="App_Code\DeviceConstants.cs" />
-    <Compile Include="App_Code\WebformViewEngine.cs" />
+    <Compile Include="App_Code\WM_WebFormViewEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

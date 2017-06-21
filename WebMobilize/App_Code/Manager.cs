@@ -9,12 +9,14 @@ namespace WebMobilize
 {
     public static class Manager
     {
-        public static void Initialize(bool DebugMode = false)
+        public static void Initialize(bool load_RazorViewEngine = true ,  bool load_WebFormViewEngine = false)
         {
             DisplayModeRegistration.RegisterDisplayModes();
 
             ViewEngines.Engines.Clear();
-            ViewEngines.Engines.Add(new WMRazorViewEngine());
+            if (load_RazorViewEngine)  ViewEngines.Engines.Add(new WM_RazorViewEngine());
+            if (load_WebFormViewEngine) ViewEngines.Engines.Add(new WM_WebformViewEngine());
+
         }
 
         public static List<String> ListDisplayModes()
