@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMobilize", "WebMobilize\WebMobilize.csproj", "{645ECD1F-E167-4FAC-B6BA-49D522FE5164}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMobilzeDemo", "WebMobilzeDemo\WebMobilzeDemo.csproj", "{73E78930-3D5B-43D8-A2F8-4DB06D330309}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{645ECD1F-E167-4FAC-B6BA-49D522FE5164}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{645ECD1F-E167-4FAC-B6BA-49D522FE5164}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{645ECD1F-E167-4FAC-B6BA-49D522FE5164}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73E78930-3D5B-43D8-A2F8-4DB06D330309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73E78930-3D5B-43D8-A2F8-4DB06D330309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73E78930-3D5B-43D8-A2F8-4DB06D330309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73E78930-3D5B-43D8-A2F8-4DB06D330309}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {331FE9FA-C7E1-4CE4-B7F1-5BC4EB0BF00B}
 	EndGlobalSection
 EndGlobal

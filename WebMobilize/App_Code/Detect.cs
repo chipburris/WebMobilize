@@ -177,7 +177,7 @@ namespace WebMobilize
         public static bool isIE()
         {
             string browsername = HttpContext.Current.Request.Browser.Browser;
-            if (browsername.ToLower() == "ie") return true;
+            if (string.Equals(browsername, "ie", StringComparison.OrdinalIgnoreCase)) return true;
             else { return false; }
         }
 
@@ -186,7 +186,7 @@ namespace WebMobilize
             string browsername = HttpContext.Current.Request.Browser.Browser;
             int browseMajorVersion = HttpContext.Current.Request.Browser.MajorVersion;
 
-            if (browsername.ToLower() == "ie" && browseMajorVersion < 9) return true;
+            if (string.Equals(browsername, "ie", StringComparison.OrdinalIgnoreCase) && browseMajorVersion < 9) return true;
             else { return false; }
         }
 
@@ -203,7 +203,7 @@ namespace WebMobilize
 
             if (UserAgent.IndexOf("Mozilla/5.0", StringComparison.OrdinalIgnoreCase) >= 0)
             { return true; }
-            if (browsername.ToLower() == "ie" && browseMajorVersion > 9) return true;
+            if (string.Equals(browsername, "ie", StringComparison.OrdinalIgnoreCase) && browseMajorVersion > 9) return true;
             return false;
         }
 

@@ -12,7 +12,7 @@ namespace WebMobilize
         public static void Initialize(bool DebugMode = false)
         {
             DisplayModes.RegisterDisplayModes();
-
+            
             ViewEngines.Engines.Clear();
             ViewEngines.Engines.Add(new WMRazorViewEngine());
         }
@@ -21,6 +21,7 @@ namespace WebMobilize
         {
             List<String> displaymodes = new List<string>();
             List<IDisplayMode> displaymodelist = DisplayModeProvider.Instance.Modes.ToList();
+            
 
             foreach (IDisplayMode DPM in displaymodelist)
             {

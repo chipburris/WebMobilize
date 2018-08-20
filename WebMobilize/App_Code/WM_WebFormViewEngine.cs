@@ -3,7 +3,7 @@ using System.Web.Mvc;
 
 namespace WebMobilize
 {
-    internal class mWebformViewEngine : WebFormViewEngine
+    internal class WM_WebformViewEngine : WebFormViewEngine
     {
         private const string STR_Views = "~/Views/{1}/";
 
@@ -16,9 +16,9 @@ namespace WebMobilize
         /// <summary>
         /// Initializes a new instance of the <see cref="mWebformViewEngine"/> class.
         /// </summary>
-        public mWebformViewEngine()
+        public WM_WebformViewEngine()
         {
-          
+
 
             base.ViewLocationFormats = base.ViewLocationFormats.Concat
             (new[] { STR_ViewsActionViewsWebForm }).ToArray();
@@ -31,4 +31,4 @@ namespace WebMobilize
                         }).ToArray();
         }
     }
-} 
+}
