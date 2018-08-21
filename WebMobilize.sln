@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMobilize", "WebMobilize\WebMobilize.csproj", "{645ECD1F-E167-4FAC-B6BA-49D522FE5164}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMobilzeDemo", "WebMobilzeDemo\WebMobilzeDemo.csproj", "{73E78930-3D5B-43D8-A2F8-4DB06D330309}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMobilizeDemo", "WebMobilizeDemo\WebMobilizeDemo.csproj", "{27F6B358-E307-4BFF-9C3E-32A1BB7C7D24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{645ECD1F-E167-4FAC-B6BA-49D522FE5164}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{645ECD1F-E167-4FAC-B6BA-49D522FE5164}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{645ECD1F-E167-4FAC-B6BA-49D522FE5164}.Release|Any CPU.Build.0 = Release|Any CPU
-		{73E78930-3D5B-43D8-A2F8-4DB06D330309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{73E78930-3D5B-43D8-A2F8-4DB06D330309}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{73E78930-3D5B-43D8-A2F8-4DB06D330309}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{73E78930-3D5B-43D8-A2F8-4DB06D330309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27F6B358-E307-4BFF-9C3E-32A1BB7C7D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27F6B358-E307-4BFF-9C3E-32A1BB7C7D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27F6B358-E307-4BFF-9C3E-32A1BB7C7D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27F6B358-E307-4BFF-9C3E-32A1BB7C7D24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
