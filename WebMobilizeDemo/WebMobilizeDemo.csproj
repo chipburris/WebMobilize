@@ -211,6 +211,7 @@
     <Content Include="Views\Home\Browser.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_code\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>

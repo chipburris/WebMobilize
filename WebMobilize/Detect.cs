@@ -43,6 +43,22 @@ namespace WebMobilize
             return false;
         }
 
+        public static bool isDesktop()
+        {
+            string UserAgent = HttpContext.Current.Request.UserAgent.ToLower();
+            string[] TestedAttributes = { mobile, ipad, iphone, ipod, android, winphone };
+
+            foreach (string attribute in TestedAttributes)
+            {
+                if (UserAgent.Contains(attribute.ToLower())) { return false; }
+            }
+
+            if (HttpContext.Current.Request.Browser.Crawler) return false;
+
+            return true;
+        }
+
+
         /// <summary>
         /// Is the browsing device a Mobile device
         /// </summary>
@@ -74,7 +90,7 @@ namespace WebMobilize
         /// </summary>
         /// <returns></returns>
         ///
-        public static bool isSmallTouch()
+        public static bool isPhone()
         {
             String UserAgent = HttpContext.Current.Request.UserAgent;
 

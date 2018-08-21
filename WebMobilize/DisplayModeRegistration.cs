@@ -25,8 +25,9 @@ namespace WebMobilize
 
 
             DisplayModeProvider.Instance.Modes.Insert(index, new DefaultDisplayMode(DeviceConstants.WebKit) { ContextCondition = (context => Detect.isWebKit()) });
+            DisplayModeProvider.Instance.Modes.Insert(index, new DefaultDisplayMode(DeviceConstants.Desktop) { ContextCondition = (context => Detect.isDesktop()) });
             DisplayModeProvider.Instance.Modes.Insert(index, new DefaultDisplayMode(DeviceConstants.mobile) { ContextCondition = (context => Detect.isMobile()) });
-            DisplayModeProvider.Instance.Modes.Insert(index, new DefaultDisplayMode(DeviceConstants.SmallTouch) { ContextCondition = (ctx => Detect.isSmallTouch()) });
+            DisplayModeProvider.Instance.Modes.Insert(index, new DefaultDisplayMode(DeviceConstants.phone) { ContextCondition = (ctx => Detect.isPhone()) });
             DisplayModeProvider.Instance.Modes.Insert(index, new DefaultDisplayMode(DeviceConstants.Tablet) { ContextCondition = (ctx => Detect.isTablet()) });
             DisplayModeProvider.Instance.Modes.Insert(index, new DefaultDisplayMode(DeviceConstants.iOS) { ContextCondition = (context => Detect.isIOS()) });
             DisplayModeProvider.Instance.Modes.Insert(index, new DefaultDisplayMode(DeviceConstants.iPad) { ContextCondition = (ctx => Detect.isIPad()) });
@@ -36,6 +37,8 @@ namespace WebMobilize
             DisplayModeProvider.Instance.Modes.Insert(index, new DefaultDisplayMode(DeviceConstants.WebCrawler) { ContextCondition = (ctx => Detect.isCrawler()) });
         }
 
+
+     
       
     }
 }

@@ -15,7 +15,7 @@
         public const string WebKit = "WebKit";
         public const string Chrome = "Chrome";
         public const string BADIE = "BADIE";
-        public const string SmallTouch = "SmallTouch";
+        public const string phone = "Phone";
         public const string Desktop = "Desktop";
         public const string WebCrawler = "WebCrawler";
 

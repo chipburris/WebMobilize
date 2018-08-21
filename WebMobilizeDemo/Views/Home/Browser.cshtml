@@ -2,23 +2,26 @@
 @{
     ViewBag.Title = "Browser";
     System.Web.HttpBrowserCapabilitiesBase currentbrowser = Request.Browser;
+    var cssClass = "" ;
 }
 
-<h2>Your Browser</h2>
+<br/>
 
-<div class="row-fluid ">
-    <div class="span12 well hero-unit ui-body-@ViewBag.JQTheme">
-        <h4>Mobivant Browser Detection Capabilities</h4>
-        <h5>Given your Browser agent: @Request.UserAgent.ToString()</h5>
+
+<div class="row ">
+    <div class="col jumbotron">
+        <h4 class=text-center>WebMobilize Browser Detection Capabilities</h4>
+        <h5>This is your Browser agent string:</h5>
+        <h6>@Request.UserAgent.ToString()</h6>
 
     </div>
 </div>
 
 
 
-<div class="row-fluid ">
+<div class="row ">
 
-    <div class="span6 ">
+    <div class="col ">
 
         <h4>Standard Browser Detection</h4>
         <p>This is some of what we can detect using what comes standard in MVC.</p>
@@ -30,8 +33,9 @@
 
         <table class="table table-condensed ">
             <thead>
-            <th>  currentbrowser.[<em>capability</em>]</th>
-            <th>Your Browser</th></thead>
+            <th>currentbrowser.[<em>capability</em>]</th>
+            <th>Your Browser</th>
+            </thead>
             <tr><td>Browser</td> <td>@currentbrowser.Browser</td> </tr>
             <tr><td>Version</td> <td>@currentbrowser.Version</td> </tr>
             <tr><td>MajorVersion</td> <td>@currentbrowser.MajorVersion</td> </tr>
@@ -43,32 +47,47 @@
 
     </div>
 
-    <div class="span6 ">
+    <div class="col ">
 
         <h4>Webmobilize Expanded Detection</h4>
         <p>
             With the WebMobilize tools the detection has been expanded. For each condition a <span class="kwrd">boolean</span> is
             returned.
         </p>
-        <div class="csharpcode alert"><span class="kwrd">using</span> WebMobilize.<span class="obj">Detect</span><em>.condition()</em></div><br />
-        <table class="table table-condensed ">
-            <thead>
-            <th>  <em>condition()</em></th>
-            <th>Your Browser</th></thead>
-            <tr><td>isMobile</td> <td>@Detect.isMobile()</td> </tr>
-            <tr><td>isIPhone</td> <td>@Detect.isIPhone()</td> </tr>
-            <tr><td>isIPad</td> <td>@Detect.isIPad()</td> </tr>
-            <tr><td>isIOS</td> <td>@Detect.isIOS()</td> </tr>
-            <tr><td>isWebKit</td> <td>@Detect.isWebKit()</td> </tr>
-            <tr><td>isMetro</td> <td>@Detect.isMetro()</td> </tr>
-            <tr><td>isAndroid</td> <td>@Detect.isAndroid()</td> </tr>
-            <tr><td>isChrome</td> <td>@Detect.isChrome()</td> </tr>
-            <tr><td>isIE</td> <td>@Detect.isIE()</td> </tr>
-            <tr><td>isBadIE</td> <td>@Detect.isBadIE()</td> </tr>
-            <tr><td>isCrawler</td> <td>@Detect.isCrawler()</td> </tr>
-            <tr><td>HasHTML5Canvas</td> <td>@Detect.HasHTML5Canvas()</td> </tr>
+        <div class="csharpcode alert"><span class="kwrd">using</span> WebMobilize.<span class="obj">Detect</span><em>.condition()</em>
+        </div><br />
 
-        </table>
+              <table class="table table-condensed ">
+                  <thead>
+                  <th>  <em>condition()</em></th>
+                  <th>Your Browser</th></thead>
+
+                  <tr><td><h5>Device</h5></td> <td></td> </tr>
+                  <tr><td>isMobile</td> <td>@Detect.isMobile()</td> </tr>
+                  <tr><td>isPhone</td> <td>@Detect.isPhone()</td> </tr>
+                  <tr><td>isTablet</td> <td>@Detect.isTablet()</td> </tr>
+                  <tr><td>isDesktop</td> <td>@Detect.isDesktop()</td> </tr>
+
+                  <tr><td><h5>Brand Specific Device</h5></td> <td></td> </tr>
+
+                  <tr><td>isIOS</td> <td>@Detect.isIOS()</td> </tr>
+                  <tr><td>isIPhone</td> <td>@Detect.isIPhone()</td> </tr>
+                  <tr><td>isIPad</td> <td>@Detect.isIPad()</td> </tr>
+                  <tr><td>isAndroid</td> <td>@Detect.isAndroid()</td> </tr>
+
+
+                  <tr><td><h5>Browser</h5></td> <td></td> </tr>
+
+                  <tr><td>isWebKit</td> <td>@Detect.isWebKit()</td> </tr>
+                  <tr><td>isMetro</td> <td>@Detect.isMetro()</td> </tr>
+
+                  <tr><td>isChrome</td> <td>@Detect.isChrome()</td> </tr>
+                  <tr><td>isIE</td> <td>@Detect.isIE()</td> </tr>
+                  <tr><td>isBadIE</td> <td>@Detect.isBadIE()</td> </tr>
+                  <tr><td>isCrawler</td> <td>@Detect.isCrawler()</td> </tr>
+                  <tr><td>HasHTML5Canvas</td> <td>@Detect.HasHTML5Canvas()</td> </tr>
+
+              </table>
     </div>
 
 
