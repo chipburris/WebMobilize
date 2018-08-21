@@ -23,11 +23,6 @@ namespace WebMobilizeDemo.Controllers
             return View();
         }
 
-        public ActionResult Browser()
-        {
-            ViewBag.Message = "About Your Browser.";
-
-            return View();
-        }
+       
     }
 }

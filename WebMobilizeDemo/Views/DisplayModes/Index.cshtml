@@ -1,0 +1,48 @@
+﻿
+<div class="row-fluid" >
+    <div class = "span12  well hero-unit ui-body-@ViewBag.JQTheme"  > 
+        <h4>Display Modes</h4>
+  
+    </div>
+</div>
+<div class="row-fluid">
+
+         
+    <div class = "span6 well  ui-body-@ViewBag.JQTheme" >
+        <h5>
+            There are two built in display modes in MVC4. There is the standard desktop dsplaymode which has no file name modifier, and
+            then the display mode for mobile 
+        </h5>
+        <br />
+
+        <h5>
+            The mobile displaymode uses the format <em>viewname</em>.mobile.<em>extension</em> (example index.mobile.cshtml)
+        </h5>
+        <br />
+        <h5>
+            There is a bit of a problem in that the existing displaymodes do not detect some Android tablets and some iPads as
+            being Mobile Devices. So we modified Mobile to catch them.
+
+        </h5>
+        <br />
+                 
+        <h5>
+            We started thinking, wouldn't it be great to have a display mode just for tablets as well ? So then we added one. Then we went a bit crazy and added even more display modes.
+
+        </h5>
+               
+    </div>
+
+    <div class = "span6  ">  
+              
+        <table class="table table-condensed ">
+            <thead><th>All the Displaymodes</th></thead>  
+            @{
+                var displaymodelist = WebMobilize.Manager.ListDisplayModes();
+                foreach (string DPM in displaymodelist)
+                {<tr><td> @DPM  </td> </tr>}
+            }
+        </table>
+    </div>
+
+</div>
