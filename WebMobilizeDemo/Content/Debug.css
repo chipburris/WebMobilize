@@ -1,0 +1,15 @@
+﻿
+.debug_border
+{
+  border: 1px solid #666;
+}
+
+.debug_border_red
+{
+  border: 1px solid red;
+}
+
+.debug_border_blue
+{
+  border: 1px solid blue;
+}

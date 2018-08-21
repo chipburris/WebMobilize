@@ -12,9 +12,9 @@ namespace WebMobilize
         public static void Initialize(bool DebugMode = false)
         {
             DisplayModes.RegisterDisplayModes();
-            
             ViewEngines.Engines.Clear();
-            ViewEngines.Engines.Add(new WMRazorViewEngine());
+            ViewEngines.Engines.Add(new RazorViewEngine());
+            ViewEngines.Engines.Add(new WebFormViewEngine());
         }
 
         public static List<String> ListDisplayModes()

@@ -24,6 +24,8 @@ namespace WebMobilizeDemo
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/code.css",
+                      "~/Content/Debug.css",
                       "~/Content/site.css"));
         }
     }

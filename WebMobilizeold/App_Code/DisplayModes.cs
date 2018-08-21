@@ -2,7 +2,7 @@
 
 namespace WebMobilize
 {
-    internal static class DisplayModes
+    public class DisplayModes
     {
         // Unfortunately the the existing mobile display mode has a few issues. It appears to use
         // Request.Browser.IsMobileDevice or Request.UserAgent.IndexOf("Mobile", StringComparison.OrdinalIgnoreCase)
